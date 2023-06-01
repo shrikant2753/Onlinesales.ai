@@ -20,14 +20,14 @@ salary = pd.read_csv("data/Salaries.csv")
 
 
 #merg dept and employee dataframe on id
-df = pd.merge(dept, employee, left_on='ID', right_on=('DEPT ID'))
+df = pd.merge(dept, employee, left_on='ID', right_on=('DEPT_ID'))
 
 # merge df and salary dataframe
 dataframe = pd.merge(df, salary, left_on=('ID_y'), right_on=('EMP_ID'))
 
 
 #calculating average salaries of a department 
-data = dataframe.groupby(['NAME_x'])['AMT (USD)'].mean()
+data = dataframe.groupby(['NAME_x'])['AMT_(USD)'].mean()
 
 #sorting the data in desccending order
 #printing3 highest salaries of the department
